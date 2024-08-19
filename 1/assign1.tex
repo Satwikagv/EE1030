@@ -1,7 +1,15 @@
-%iffalse
 \let\negmedspace\undefined
 \let\negthickspace\undefined
-\documentclass[journal,12pt,onecolumn]{IEEEtran}
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
+
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+
+\usepackage{gvv-book}
+\usepackage{gvv}
 \usepackage{cite}
 \usepackage{amsmath,amssymb,amsfonts,amsthm}
 \usepackage{algorithmic}
@@ -17,8 +25,8 @@
 \usepackage[breaklinks=true]{hyperref}
 \usepackage{tkz-euclide} 
 \usepackage{listings}
-\usepackage{gvv}                                        
-%\def\inputGnumericTable{}                                 
+% \usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
 \usepackage[latin1]{inputenc}                                
 \usepackage{color}                                            
 \usepackage{array}                                            
@@ -28,35 +36,25 @@
 \usepackage{hhline}                                           
 \usepackage{ifthen}                                           
 \usepackage{lscape}
-\usepackage{tabularx}
-\usepackage{array}
-\usepackage{float}
-\usepackage{multicol}
-
-\newtheorem{theorem}{Theorem}[section]
-\newtheorem{problem}{Problem}
-\newtheorem{proposition}{Proposition}[section]
-\newtheorem{lemma}{Lemma}[section]
-\newtheorem{corollary}[theorem]{Corollary}
-\newtheorem{example}{Example}[section]
-\newtheorem{definition}[problem]{Definition}
-\newcommand{\BEQA}{\begin{eqnarray}}
-\newcommand{\EEQA}{\end{eqnarray}}
-\newcommand{\define}{\stackrel{\triangle}{=}}
-\theoremstyle{remark}
-\newtheorem{rem}{Remark}
-
-% Marks the beginning of the document
 \begin{document}
+
 \bibliographystyle{IEEEtran}
 \vspace{3cm}
 
 \title{8.circle}
-\author{ee24btech11027- satwikagv}
-\maketitle
-\bigskip
+\author{EE24BTECH11027-satwikagv}
+% \maketitle
+% \newpage
+% \bigskip
+{\let\newpage\relax\maketitle}
 
 \renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\setlength{\intextsep}{10pt} % Space between text and floats
+
+
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
 \renewcommand{\thetable}{\theenumi}
  
 \begin{enumerate}[start=6]
