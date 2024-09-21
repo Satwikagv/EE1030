@@ -27,7 +27,7 @@ y_coords = list(y_coords) + [y_coords[0]]
 plt.plot(x_coords, y_coords, 'b-o', label='Parallelogram')
 labels = ['A', 'B', 'C', 'D']
 for i, label in enumerate(labels):
-    plt.text(x_coords[i], y_coords[i], f' {label}({int(x_coords[i])},{int(y_coords[i])})', fontsize=12, ha='right', color='black')
+    plt.text(x_coords[i], y_coords[i], f' {label}({int(x_coords[i])},{int (y_coords[i])})', fontsize=12, ha='right', color ='black')
 # Add labels and title
 plt.xlabel('X axis')
 plt.ylabel('Y axis')
