@@ -1,0 +1,87 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
+
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+% \usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{1-1.2-11}
+\author{EE24BTECH11027 - satwikagv}
+% \maketitle
+% \newpage
+% \bigskip
+{\let\newpage\relax\maketitle}
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\setlength{\intextsep}{10pt} % Space between text and floats
+
+
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\renewcommand{\thetable}{\theenumi}
+\textbf{Question}:\\
+Find the equation of a circle passing through the point \brak{7,3} having radius 3 units adn whose centre lies on the line $y=x-1$.\\
+\textbf{solution}:\\From the given information, the following equations can be formulated using the circle equation 
+\begin{align}
+\|x\|^2 + 2u^\top x + f &= 0\\
+\|P\|^2 + 2u^\top P + f &= 0\\
+u=\myvec{-k\\1-k}\\
+\|u\|^2 - f &= r^2\\
+\end{align}
+where\\
+\begin{align}
+p=\myvec{7\\3},r=3\\
+\end{align}
+From \brak{0.2} and \brak{0.4}
+\begin{align}
+\|P\|^2 + 2u^\top P + \|u\|^2 = r^2\\ 	
+\end{align}
+Substituting from \brak{0.3} and numerical values,
+\begin{align}
+k^2+(1-k)^2+2\myvec{-k&1-k}\myvec{7\\3}+\|P\|^2-r^2 = 0\\
+2k^2-2k+1+6-20k+7^2+3^2-3^2=0\\
+k^2-11k+28=0\\
+k=7,4\\
+\end{align}
+resulting in circles with centres 
+\begin{align}
+-u=\myvec{7\\6} or \myvec{4\\3}\\	
+\end{align}
+\end{document}
