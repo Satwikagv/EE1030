@@ -64,31 +64,26 @@ Find the equation of a circle passing through the point \brak{7,3} having radius
   \input{tables/table.tex}
   \caption{Variables Used}
 \end{table}
-\\From the given information, the following equations can be formulated using the circle equation 
+From the given information, the following equations can be formulated using the circle equation 
 \begin{align}
 \|x\|^2 + 2u^\top x + f &= 0\\
 \|P\|^2 + 2u^\top P + f &= 0\\
-u=\myvec{-k\\1-k}\\
-\|u\|^2 - f &= r^2\\
+\|u\|^2 - f &= r^2
 \end{align}
-where\\
+From \brak{0.2} and \brak{0.3}
 \begin{align}
-p=\myvec{7\\3},r=3\\
+\|P\|^2 + 2u^\top P + \|u\|^2 = r^2 	
 \end{align}
-From \brak{0.2} and \brak{0.4}
-\begin{align}
-\|P\|^2 + 2u^\top P + \|u\|^2 = r^2\\ 	
-\end{align}
-Substituting from \brak{0.3} and numerical values,
+Substituting from $u$ and numerical values,
 \begin{align}
 k^2+(1-k)^2+2\myvec{-k&1-k}\myvec{7\\3}+\|P\|^2-r^2 = 0\\
 2k^2-2k+1+6-20k+7^2+3^2-3^2=0\\
 2k^2-22k+56=0\\
-k=7,4\\
+k=7,4
 \end{align}
 resulting in circles with centres 
 \begin{align}
--u=\myvec{7\\6} or \myvec{4\\3}\\	
+-u=\myvec{7\\6} or \myvec{4\\3}	
 \end{align}
 \begin{figure}[h!]
    \centering
