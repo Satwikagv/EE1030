@@ -1,12 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
-double **createMat(int m, int n) {
+#include "/home/g-v-satwika/matgeo/codes/msoft/libs/matfun.h"
+/*double **createMat(int m, int n) {
     double **a = (double **)malloc(m * sizeof(*a));
     for (int i = 0; i < m; i++)
         a[i] = (double *)malloc(n * sizeof(*a[i]));
     return a;
-}
+}*/
 
 void solveQuadratic(double a, double b, double c, double *root1, double *root2) {
     double discriminant = b * b - 4 * a * c;

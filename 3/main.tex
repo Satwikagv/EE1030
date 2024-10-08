@@ -58,7 +58,7 @@
 \renewcommand{\thetable}{\theenumi}
 \textbf{Question}:\\
 Find the equation of a circle passing through the point \brak{7,3} having radius 3 units and whose centre lies on the line $y=x-1$.\\
-\textbf{solution}:
+\solution:
 \begin{table}[h!]    
   \centering
   \input{tables/table.tex}
@@ -66,24 +66,24 @@ Find the equation of a circle passing through the point \brak{7,3} having radius
 \end{table}
 From the given information, the following equations can be formulated using the circle equation 
 \begin{align}
-\|x\|^2 + 2u^\top x + f &= 0\\
-\|P\|^2 + 2u^\top P + f &= 0\\
-\|u\|^2 - f &= r^2
+\norm{x}^2 + 2u^\top x + f &= 0\\
+\norm{P}^2 + 2u^\top P + f &= 0\\
+\norm{u}^2 - f &= r^2
 \end{align}
 From \brak{0.2} and \brak{0.3}
 \begin{align}
-\|P\|^2 + 2u^\top P + \|u\|^2 = r^2 	
+	\norm{P}^2 + 2u^\top P + \norm{u}^2 &= r^2 	
 \end{align}
 Substituting the values of $u$,$P$ and $r$,
 \begin{align}
-k^2+(1-k)^2+2\myvec{-k&1-k}\myvec{7\\3}+\|P\|^2-r^2 = 0\\
-2k^2-2k+1+6-20k+7^2+3^2-3^2=0\\
-2k^2-22k+56=0\\
-k=7,4
+	k^2+(1-k)^2+2\myvec{-k&1-k}\myvec{7\\3}+\norm{P}^2-r^2 &= 0\\
+	2k^2-2k+1+6-20k+7^2+3^2-3^2 &=0\\
+	2k^2-22k+56 &=0\\
+	k &=7,4
 \end{align}
 resulting in circles with centres 
 \begin{align}
--u=\myvec{7\\6} or \myvec{4\\3}	
+	-u&=\myvec{7\\6} or \myvec{4\\3}	
 \end{align}
 \begin{figure}[h!]
    \centering
