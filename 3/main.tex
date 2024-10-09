@@ -67,18 +67,17 @@ Find the equation of a circle passing through the point \brak{7,3} having radius
 \\From the given information, the following equations can be formulated using the circle equation 
 \begin{align}
 	\norm{x}^2 + 2u^\top x + f &= 0\\
-	\norm{P}^2 + 2u^\top P + f &= 0\\
-	\norm{u}^2 - f &= r^2
+	\norm{P}^2 + 2u^\top P + f &= 0\label{eq:0.2}\\ 
+	\norm{u}^2 - f &= r^2\label{eq:0.3}
 \end{align}
-From \brak{0.2} and \brak{0.3}
+From \eqref{eq:0.2} and \eqref{eq:0.3}
 \begin{align}
 	\norm{P}^2 + 2u^\top P + \norm{u}^2 &= r^2 	
 \end{align}
 Substituting the values of $u$,$P$ and $r$,
 \begin{align}
-	k^2+(1-k)^2+2\myvec{-k&1-k}\myvec{7\\3}+\norm{P}^2-r^2 &= 0\\
-	2k^2-2k+1+6-20k+7^2+3^2-3^2 &=0\\
-	2k^2-22k+56 &=0\\
+	2k^2-2k+1+6-20k+7^2+3^2-3^2 &=0 \\
+	2k^2-22k+56 &=0 \\
 	k &=7,4
 \end{align}
 resulting in circles with centres 
