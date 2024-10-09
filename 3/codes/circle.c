@@ -4,16 +4,6 @@
 #include "/home/g-v-satwika/matgeo/codes/msoft/libs/matfun.h"
 #include "/home/g-v-satwika/matgeo/codes/msoft/libs/geofun.h"
 
-// Solve quadratic equation ax^2 + bx + c = 0
-/*void solveQuadratic(double a, double b, double c, double *root1, double *root2) {
-    double discriminant = b * b - 4 * a * c;
-    if (discriminant >= 0) {
-        *root1 = (-b + sqrt(discriminant)) / (2 * a);
-        *root2 = (-b - sqrt(discriminant)) / (2 * a);
-    } else {
-        *root1 = *root2 = 0;  
-}
-}*/
 int main() {
     double **P = createMat(1, 2); // Create a point vector for P
     P[0][0] = 7;  // x-coordinate of point P
@@ -53,15 +43,19 @@ int main() {
     fprintf(file, "P(7.00,3.00)");
     fclose(file);
     // Free the allocated memory
-    for (int i = 0; i < 1; i++) {
+   /* for (int i = 0; i < 1; i++) {
         free(center1[i]);
         free(center2[i]);
         free(P[i]);
     }
     free(center1);
     free(center2);
-    free(P);
-
+    free(P);*/
+    freeMat(center1,1);
+    freeMat(center2,1);
+    freeMat(P,1);
+    freeMat(CM,3);
+    freeMat(K,2);
     return 0;
 }
 
