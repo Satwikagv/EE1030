@@ -1,0 +1,190 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
+
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+\usepackage{multicol}
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+% \usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\usepackage{tikz}
+\usepackage{tikz-3dplot}
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{2018-ma}
+\author{EE24BTECH11027 - satwikagv}
+% \maketitle
+% \newpage
+% \bigskip
+{\let\newpage\relax\maketitle}
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\setlength{\intextsep}{10pt} % Space between text and floats
+
+
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\renewcommand{\thetable}{\theenumi}
+\begin{enumerate}
+\item  The image of the half plane $\operatorname{Re}\brak{z}+\operatorname{Im}\brak{z}>0$ under the map $\omega=\frac{z-1}{z+i}$ is given by 
+\begin{multicols}{4}
+\begin{enumerate}
+    \item $\operatorname{Re}\brak{\omega}>0$
+    \item $\operatorname{Im}\brak{\omega}>0$
+    \item $|\omega|>1$
+    \item $|\omega|<1$
+\end{enumerate}
+\end{multicols}
+\item Let $D \subset R^2$ denote the closed disc with center at the origin and radius 2. Then
+\begin{align*}
+    \displaystyle \iint\limits_{D} e^{-\brak{x^2+y^2}}dxdy=
+\end{align*}
+\begin{multicols}{4}
+    \begin{enumerate}
+        \item $\pi\brak{1-e^{-4}}$
+        \item $\frac{\pi}{2}\brak{1-e^{-4}}$
+        \item $\pi\brak{1-e^{-2}}$
+        \item $\frac{\pi}{2}\brak{1-e^{-2}}$
+    \end{enumerate}
+\end{multicols}
+\item Consider the polynomial $p\brak{X}=X^4+4$ in the ring $Q\sbrak{X}$ of polynomials in the variable $X$ with coefficients in the field $Q$ of rational numbers. Then
+\begin{enumerate}
+    \item the set of zeroes of $p\brak{X}$ in $C$ forms a group under multiplication
+    \item $p\brak{X}$ is reducible in the ring $Q\sbrak{X}$
+    \item the splitting field of $P\brak{X}$ has degree 3 over $Q$
+    \item the splitting field of $P\brak{X}$ has degree 4 over $Q$
+\end{enumerate}
+\item Which one of the following statements is true?
+\begin{enumerate}
+    \item Every group of order 12 has a non trivial proper normal subgroup 
+    \item Some group of order 12 does not have a non-trivial proper normal subgroup
+    \item Every group of order 12 has a subgroup of order 6
+    \item Every group of order 12 has an element of order 12
+\end{enumerate}
+\item For an odd prime $p$, consider the ring $Z\sbrak{\sqrt{-p}}=\cbrak{a+b\sqrt{-p}: a,b\in Z}\subseteq C$. Then the element 2 in $Z|\sqrt{-p}|$ is 
+\begin{multicols}{4}
+\begin{enumerate}
+    \item a unit 
+    \item a square
+    \item a prime 
+    \item irreducible
+\end{enumerate}
+\end{multicols}
+\item Consider the following two statements:\\
+  P : The matrix \myvec{0&5\\0&7} has infinitely many LU factorizations, where $L$ is lower triangular with each diagonal entry 1 and $U$ is upper triangular.\\
+  Q: The matrix \myvec{0&0\\2&5} has no LU factorization, where $L$ is lower triangular with each diagonal entry 1 and $U$ is upper triangular.\\
+  Then which one of the following options is correct?
+  \begin{enumerate}
+      \item P is TRUE and Q is FALSE
+      \item Both P and Q are TRUE
+      \item P is FALSE and Q is TRUE
+      \item Both P and Q are FALSE
+  \end{enumerate}
+\item If the characteristic curves of the partial differential equation $xu_{xx}+2x^2u_{xy}=u_x-1$ are $\mu\brak{x,y}=c_1$ and $\nu\brak{x,y}=c_2$, where $c_1$ and $c_2$ are constants, then
+\begin{enumerate}
+    \item $\mu\brak{x,y}=x^2-y,\nu\brak{x,y}=y$
+    \item $\mu\brak{x,y}=x^2+y,\nu\brak{x,y}=y$
+    \item $\mu\brak{x,y}=x^2+y,\nu\brak{x,y}=x^2$
+    \item $\mu\brak{x,y}=x^2-y,\nu\brak{x,y}=x^2$
+\end{enumerate}
+\item Let $f : X\rightarrow Y$ be a continuous map from a Hausdorff topological space $X$ to a metric space $Y$. Consider the following two statements:\\
+  P: $f$ is a closed map and the inverse image $f^{-1}\brak{y}=\cbrak{x\in X : f\brak{x}=y} $ is compact for each $y \in Y$.\\
+  Q: For every compact subset $K \subset Y$, the inverse image $f^{-1}\brak{K}$ is a compact subset of $X$.\\which one of the following is true?
+  \begin{enumerate}
+      \item Q implies P but P does NOT imply Q
+      \item P implies Q but Q does NOT imply P
+      \item P and Q are equivalent
+      \item neither P implies Q nor Q implies P
+  \end{enumerate}
+\item Let $X$ denote $R^2$ endowed with the usual topology. Let $Y$ denote $R$ endowed with the co-finite topology. If Z is the product topological space $Y\times Y$, then 
+\begin{enumerate}
+    \item the topology of $X$ is the same as the topology of $Z$
+    \item the topology of $X$ is strictly coarser \brak{\text{weaker}} than that of $Z$
+    \item the topology of $Z$ is strictly coarser \brak{\text{weaker}} than that of $X$
+    \item the topology of $X$ cannot be compared with that of $Z$
+\end{enumerate}
+\item Consider $R^n$ with the usual topology for $n=1,2,3$. Each of the following options gives topological spaces $X$ and $Y$ with respective induced topologies. In which option is $X$ homeomorphic to $Y$?
+\begin{enumerate}
+    \item $X=\cbrak{\brak{x,y,z}\in R^3 : x^2+y^2=1},Y=\cbrak{\brak{x,y,z}\in R^3 : z=0, x^2+y^2 \neq 0}$
+    \item $X=\cbrak{\brak{x,y}\in R^2 : y=\sin\brak{\frac{1}{2}},0<x\le 1}\cup \cbrak{\brak{x,y}\in R^2: x-0,-1\le y \le 1},Y=\sbrak{0,1}\subseteq R$
+    \item $X=\cbrak{\brak{x,y}\in R^2:y=x\sin\brak{\frac{1}{x}},0<x \le 1}, Y=\sbrak{0,1}\subseteq R$
+    \item $X=\cbrak{\brak{x,y,z}\in R^3 : x^2+y^2=1}, Y=\cbrak{\brak{x,y,z}\in x^2+y^2=z^2\neq0}$
+\end{enumerate}
+\item Let $\cbrak{X_i}$ be a sequence of independent Poisson$\brak{\lambda}$ and let $W_n=\frac{1}{n}\sum_{i=1}^n X_i$. Then the limiting distribution of $\sqrt{n}\brak{W_n-\lambda}$ is the normal distribution with zero mean and variance given by 
+\begin{multicols}{4}
+    \begin{enumerate}
+        \item 1
+        \item $\sqrt{\lambda}$
+        \item $\lambda$
+        \item $\lambda^2$
+    \end{enumerate}
+\end{multicols}
+\item Let $X_1,X_2,X_3,\dots,X_n$ be independent and identically distributed random varibles with probability density function given by 
+\begin{align*}
+    f_X\brak{x,\theta}=
+    \begin{cases}
+        \theta e^{-\theta\brak{x-1}}, & x \ge 1,\\ 0 & \text{otherwise} 
+    \end{cases}
+\end{align*}
+Also, let $\bar{X}=\frac{1}{n}\sum_{i=1}^nX_i$. Then the maximum likelihood estimator of $\theta$ is 
+\begin{multicols}{4}
+    \begin{enumerate}
+        \item $\frac{1}{\bar{X}}$
+        \item $\frac{1}{\bar{X}}-1$
+        \item $\frac{1}{\brak{\bar{X}-1}}$
+        \item $\bar{X}$
+    \end{enumerate}
+\end{multicols}
+\item Consider the Linear Programming Problem \brak{\text{LPP}}:\\
+\hspace{2cm} Maximize \hspace{0.2cm} $\alpha X_1+X_2$\\
+\hspace{2cm} Subject to \hspace{.02cm} $2X_1+X2\leq 6,$
+
+\hspace{1.6cm} $-X_1+X_2\leq 1,$
+
+\hspace{1.6cm} $X_1+X_2\leq 4,$
+
+\hspace{1.6cm} $X_1\geq 0,X_2\geq 0,$
+\\where $\alpha$ is a constant. If the \brak{3,0} is the only optimal solution, then 
+\begin{multicols}{4}
+    \begin{enumerate}
+        \item $\alpha <-2$
+        \item $-2<\alpha<1$
+        \item $1<\alpha<2$
+        \item $\alpha>2$
+    \end{enumerate}
+\end{multicols}
+\end{enumerate}
+\end{document}
