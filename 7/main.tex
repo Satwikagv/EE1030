@@ -4,7 +4,7 @@
 \usepackage[a5paper, margin=10mm, onecolumn]{geometry}
 %\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
 \usepackage{tfrupee} % Include tfrupee package
-
+\usepackage{changepage}
 \setlength{\headheight}{1cm} % Set the height of the header box
 \setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
 \usepackage{multicol}
@@ -152,32 +152,34 @@
         \item $\lambda^2$
     \end{enumerate}
 \end{multicols}
-\item Let $X_1,X_2,X_3,\dots,X_n$ be independent and identically distributed random varibles with probability density function given by 
+\item Let $X_1,X_2,X_3,\dots,X_n$ be independent and identically distributed random variables with probability density function given by 
 \begin{align*}
     f_X\brak{x,\theta}=
     \begin{cases}
         \theta e^{-\theta\brak{x-1}}, & x \ge 1,\\ 0 & \text{otherwise} 
     \end{cases}
 \end{align*}
-Also, let $\bar{X}=\frac{1}{n}\sum_{i=1}^nX_i$. Then the maximum likelihood estimator of $\theta$ is 
+Also, let $\overline{X}=\frac{1}{n}\sum_{i=1}^nX_i$. Then the maximum likelihood estimator of $\theta$ is 
 \begin{multicols}{4}
     \begin{enumerate}
-        \item $\frac{1}{\bar{X}}$
-        \item $\frac{1}{\bar{X}}-1$
-        \item $\frac{1}{\brak{\bar{X}-1}}$
-        \item $\bar{X}$
+        \item $\frac{1}{\overline{X}}$
+        \item $\frac{1}{\overline{X}}-1$
+        \item $\frac{1}{\brak{\overline{X}-1}}$
+        \item $\overline{X}$
     \end{enumerate}
 \end{multicols}
 \item Consider the Linear Programming Problem \brak{\text{LPP}}:\\
-\hspace{2cm} Maximize \hspace{0.2cm} $\alpha X_1+X_2$\\
-\hspace{2cm} Subject to \hspace{.02cm} $2X_1+X2\leq 6,$
-
-\hspace{1.6cm} $-X_1+X_2\leq 1,$
-
-\hspace{1.6cm} $X_1+X_2\leq 4,$
-
-\hspace{1.6cm} $X_1\geq 0,X_2\geq 0,$
-\\where $\alpha$ is a constant. If the \brak{3,0} is the only optimal solution, then 
+Maximize : $\alpha X_1+X_2$\\
+\vspace{-3em}
+\begin{adjustwidth}{-8.4cm}{0pt}
+\begin{align*}
+\text{Subject to: } 2X_1+X2\leq 6,\\
+    -X_1+X_2\leq 1,\\
+    X_1+X_2\leq 4,\\
+    X_1\geq 0,X_2\geq 0,
+\end{align*}
+\end{adjustwidth}
+where $\alpha$ is a constant. If the \brak{3,0} is the only optimal solution, then 
 \begin{multicols}{4}
     \begin{enumerate}
         \item $\alpha <-2$
