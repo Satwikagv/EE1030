@@ -1,6 +1,0 @@
-\beamer@sectionintoc {2}{Problem}{3}{0}{1}
-\beamer@sectionintoc {3}{Solution}{4}{0}{2}
-\beamer@subsectionintoc {3}{1}{centre of circle in terms of a single variable}{4}{0}{2}
-\beamer@subsectionintoc {3}{2}{circle equation}{5}{0}{2}
-\beamer@subsectionintoc {3}{3}{substituting the values}{6}{0}{2}
-\beamer@subsectionintoc {3}{4}{centre of the circle}{7}{0}{2}
