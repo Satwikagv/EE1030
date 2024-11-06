@@ -27,8 +27,8 @@ Find the equation of a circle passing through the point \brak{7,3} having radius
 	\centering
 	\def\arraystretch{1.5}
 	\input{tables/table.tex}
-	\caption{Parameters}
-	\label{tab:parameters}
+	\caption{Variables}
+	\label{tab:variables}
 \end{table}
 From the given information, the following equations can be formulated using the circle equation 
 \begin{align}
@@ -56,7 +56,14 @@ resulting in circles with centres
 \definecolor{codegray}{rgb}{0.5,0.5,0.5}
 \definecolor{codepurple}{rgb}{0.58,0,0.82}
 \definecolor{backcolour}{rgb}{0.95,0.95,0.92}
-
+\begin{frame}
+\frametitle{Plot}
+\begin{figure}[htbp]
+	\includegraphics[width=0.75\columnwidth]{figs/circle_plot.png}
+	\caption{Plot of circles}
+	\label{fig:bode}
+\end{figure}
+\end{frame}
 % Settings for the C code
 \lstset{
     language=C,
@@ -103,13 +110,5 @@ resulting in circles with centres
 \begin{frame}[fragile,allowframebreaks]
 \frametitle{Python Code}
 \lstinputlisting[label=mycode1]{codes/plot.py}
-\end{frame}
-\begin{frame}
-\frametitle{Plot}
-\begin{figure}[htbp]
-	\includegraphics[width=0.75\columnwidth]{figs/circle_plot.png}
-	\caption{Plot of $y(x)$}
-	\label{fig:bode}
-\end{figure}
 \end{frame}
 \end{document}

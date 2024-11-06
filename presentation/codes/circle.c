@@ -43,14 +43,6 @@ int main() {
     fprintf(file, "P(7.00,3.00)");
     fclose(file);
     // Free the allocated memory
-   /* for (int i = 0; i < 1; i++) {
-        free(center1[i]);
-        free(center2[i]);
-        free(P[i]);
-    }
-    free(center1);
-    free(center2);
-    free(P);*/
     freeMat(center1,1);
     freeMat(center2,1);
     freeMat(P,1);
