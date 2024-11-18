@@ -1,0 +1,147 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
+\usepackage{changepage}
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{1cm}     % Set the distance between the header box and the top of the text
+\usepackage{multicol}
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+% \usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\usepackage{tikz}
+\usepackage{tikz-3dplot}
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{Eigen Values}
+\author{EE24BTECH11027 - satwikagv}
+% \maketitle
+% \newpage
+% \bigskip
+{\let\newpage\relax\maketitle}
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\setlength{\intextsep}{10pt} % Space between text and floats
+
+
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\renewcommand{\thetable}{\theenumi}
+\section{}
+\subsection{Chosen Algorithm}
+Among all the different algorithms I chose $QR$ Algorithm as it is applicable for both symmetric and non-symmetric matrices. In $QR$ Algorithm  it can be performed by using the process:
+\begin{itemize}
+    \item Hessenberg reduction
+    \item $QR$ decomposition by Gram-schmidt process
+\end{itemize}
+First the matrix is reduced into hessenberg form so it will be easy to simplify the computational complexity of matrix operations, especially for eigenvalue computations. 
+\subsection{$QR$ Algorithm}
+$QR$ algorithm is iterative and involves decomposing the matrix into its $QR$ factors where $Q$ is a orthogonal matrix and $R$ is a upper triangular matrix and recombining them in a way that progressively reveals the eigenvalues. For a $n \times n$ matrix the $QR$ Algorithms performs 
+\begin{itemize}
+    \item QR factorization - Decompose $A$ into $Q$(orthogonal matrix) and $R$(upper triangular matrix) such that $A=QR$
+    \item Matrix update - Form a new matrix by multiplying $R$ and $Q$ in the order $A^\prime=RQ$. This step creates a matrix similar to $A$ preserving its eigenvalues.
+    \item Repeat -  Replace $A$ with $A^\prime$ and repeat the steps until $A$ converges to a form where its eigenvalues are evident (a triangular or nearly diagonal form).
+\end{itemize}
+After enough iterations, the algorithm yields a matrix where the diagonal elements are the eigen values of the matrix.
+\subsection{Hessenberg form}
+The Hessenberg form has the same eigen values as the original matrix.\\We will use Householder reflectors to transform the matrix into Upper Hessenberg form.\\The Householder reflector is defined as:
+\begin{align*}
+     P=\frac{VV^T}{V^TV}
+\end{align*}
+We apply the Householder reflector to the original matrix:
+\begin{align*}
+    H_1=1-2P    
+\end{align*}
+We apply the Householder reflector to the matrix:
+\begin{align*}
+    A_1=H_1AH_1
+\end{align*}
+We repeat the process to transform the matric into Upper Hessenberg form.
+\subsection{Gram-Schmidt Process}
+A method to convert a set of non-orthonormal vectors into a set of orthonormal vectors.
+\begin{itemize}
+    \item Start with a set of non-orthonormal vectors say $\cbrak{v_1,v_2,\dots,v_3}$
+    \item Find the first orthonormal vector $e_1=\frac{v_1}{\norm{v_1}}$ 
+    \item Find the second orthonormal vectoe $e_2=\frac{v_2-(v_2.e_1)e_1}{\norm{v_2-(v_2.e_1)e_1}}$
+    \item Repeat the above for each remaining vector
+\end{itemize}
+\subsection{QR Factorization}
+A method to decompose a matrix $A$ into the product of an orthogonal matrix $Q$ and an upper triangular matrix $R$.\\To find the QR factorization of a matrix $A$,we can use the following steps:
+\begin{itemize}
+    \item Take the columns of $A$ as vectors $A_1,A_2,\dots,A_n$
+    \item Find the orthogonal vectors $U_1,U_2,\dots,U_n$ using the Gram-schmidt process
+    \item Normalize the vectors $U_1,U_2,\dots,U_n$ to get the orthonormal vectors $E_1,E_2,\dots,E_n$
+    \item The matrix $Q$ is formed by taking the dot products of the vectors $A_1,A_2,\dots,A_n$ with the orthonormal vectors $E_1,E_2,\dots,E_n$
+\end{itemize}
+\subsection{Time Complexity Algorithm}
+\begin{itemize}
+    \item $QR$ Gram-Schmidt has a time complexity of O$\brak{n^3}$ for decomposing an $n \times n$ matrix. This is due to the need for computing inner products and projections between each pair of vectors and performing orthogonalization across all columns of the matrix.  
+    \item $QR$ Householder Reflection  method is more efficient for $QR$ decomposition, with a time complexity of O$\brak{n^2}$ per reflection, and since there are typically n reflections required (one for each column), the overall complexity remains O$\brak{n^3}$.
+   % \item Jacobi method has a time complexity of O$\brak{n^2}$ for each iteration and since for n is the maximum number of iterations for convergence, the overall complexity is O$\brak{n^3}$
+\end{itemize}
+\subsection{Convergence}
+The $QR$ algorithm converges quickly for matrices that are already nearly triangular or Hessenberg (triangular except for one diagonal below the main diagonal). For general matrices, it can be transformed to Hessenberg form first, which requires O$\brak{n^3}$ work but accelerates convergence in the $QR$ steps.
+\subsection{Comparison of Algorithms}
+$QR$ Algorithm can find all eigen values when compared to other methods like power iteration,inverse iteration which are mainly used to find the dominant eigen value or a particular eigen value. $QR$ Algorithm is used to find all the eigen values for both symmetric and non-symmetric and also for both dense and sparse matrices unlike many other methods. It is accurate and robust. It is numerically stable.
+\subsection{C code}
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+% Settings for the C code
+\lstset{
+    language=C,
+    basicstyle=\footnotesize\ttfamily,
+    backgroundcolor=\color{backcolour},
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{blue},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=left,
+    numbersep=5pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=2
+    }
+\lstinputlisting{codes/eigen.c}
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+\end{document}
